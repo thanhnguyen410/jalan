@@ -1,0 +1,112 @@
+.book {
+  padding: 18rem 0 16rem;
+  border-radius: 20px;
+  background-color: $light-blue;
+  margin-bottom: 17.5rem;
+  .container {
+    max-width: 96rem;
+    margin: 0 auto;
+  }
+  &-heading {
+    text-align: center;
+    margin-bottom: 7.5rem;
+  }
+
+  &-form {
+    background-color: white;
+    border-radius: 12px;
+    padding: 2.5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr 10rem;
+    grid-gap: 2.5rem;
+    font-size: 2.5rem;
+  }
+  &-button {
+    width: 10rem;
+    height: 10rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    ion-icon {
+      color: white;
+    }
+  }
+  &-destination {
+    background-color: $gray;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    border-radius: inherit;
+    ion-icon {
+      font-size: 3rem;
+      color: $primary;
+    }
+  }
+  &-input {
+    border: none;
+    background-color: transparent;
+    color: $gray-blur;
+    font-size: inherit;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 5rem 0;
+    &-form {
+      grid-template-columns: 1fr;
+
+      > div.book-destination,
+      div.book-calendar,
+      button {
+        height: 10rem;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.dropdown {
+  width: 100%;
+  height: 100%;
+  background-color: $gray;
+  border-radius: 12px;
+  position: relative;
+  &:hover .dropdown-list {
+    opacity: 1;
+    visibility: visible;
+  }
+  &-select {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    color: $gray-blur;
+  }
+  &-list {
+    opacity: 0;
+    visibility: hidden;
+    width: 100%;
+    box-shadow: rgb(149 157 165 / 20%) 0px 8px 24px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+  }
+
+  &-item {
+    padding: 3rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    &:hover {
+      background-color: $light-blue;
+    }
+  }
+  ion-icon {
+    font-size: 3rem;
+    color: $primary;
+  }
+}

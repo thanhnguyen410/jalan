@@ -1,0 +1,138 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  font-size: 62.5%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  outline: none;
+  border: none;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  line-height: 1;
+  background-color: white;
+  padding: 5rem;
+  color: $text-color;
+  font-weight: 400;
+  overflow-x: hidden;
+  @media screen and (max-width: 767.98px) {
+    padding: 2rem;
+  }
+}
+
+.wrapper {
+  max-width: 1920px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 157.5rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 15px;
+}
+
+.heading {
+  font-weight: bold;
+  line-height: 1.25;
+  font-size: 6rem;
+  text-transform: capitalize;
+}
+
+.text {
+  font-size: 2rem;
+  font-weight: 300;
+  line-height: 1.5;
+  color: $text-color-light;
+  &--small {
+    font-size: 12px;
+  }
+}
+
+.btn {
+  display: inline-block;
+  border-radius: 12px;
+  border: none;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 600;
+  padding: 5rem 6rem;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  &--primary {
+    color: white;
+    background-color: $primary;
+  }
+}
+
+.text--primary {
+  color: $primary;
+}
+
+.text--secondary {
+  color: $secondary;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  grid-gap: 0 18.6rem;
+  position: relative;
+  @media screen and (max-width: 1023px) {
+    grid-gap: 0 8rem;
+  }
+  @media screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    grid-gap: 5rem 0;
+  }
+}
+
+@media screen and (max-width: 1599px) {
+  html {
+    font-size: 40%;
+  }
+}
